@@ -1,16 +1,58 @@
-# React + Vite
+# Employee Task Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page frontend web application built using React and Tailwind CSS.  
+It was created as an assignment to demonstrate handling mock employee data, task filtering, task creation, and basic frontend-only state management.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The app simulates a small task tracker that allows users to:
+- View employees and their assigned tasks
+- Filter tasks by status (All / Pending / In Progress / Completed)
+- Add new tasks using a modal
+- Update the status of existing tasks through a dropdown
+- View a small dashboard summary with total tasks and completion percentage
+- Search employees by name
 
-## React Compiler
+The entire app runs on the frontend using mock JSON data.  
+All updates are saved to **localStorage**, so data persists after page refresh.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Employee & Task View**  
+  Displays employees with total task count and their tasks.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Status Filter**  
+  Filters tasks by status dynamically.
+
+- **Add Task Modal**  
+  Allows selecting an employee and entering a task title.
+
+- **Edit Task Status**  
+  Each task has a dropdown to change its status.
+
+- **Dashboard Summary**  
+  Shows:
+  - Total tasks
+  - Completed tasks
+  - Completion percentage
+  - Number of employees
+
+- **Employee Search**  
+  Filters the employee list by name.
+
+- **LocalStorage Persistence**  
+  Saves all updates automatically.
+
+## Tech Stack
+
+- React (Vite)
+- Tailwind CSS
+- JavaScript
+- LocalStorage
+- Mock JSON (`src/data/employees.json`)
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
